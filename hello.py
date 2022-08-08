@@ -1,4 +1,8 @@
-x = 5
-print("number is:",x)
-x = "hello"
-print(x)
+
+def main():
+  print("Hello")
+
+def test_main(capsys):
+    main()
+    out, err = capsys.readouterr()
+    assert out == "Hello World!\n"
